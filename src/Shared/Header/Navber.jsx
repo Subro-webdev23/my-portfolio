@@ -1,9 +1,10 @@
 import React from "react";
 import logo from '/logo.svg'
+import { NavLink } from "react-router";
 
 const Header = () => {
     return (
-        <div className="sticky top-0 bg-[#0a192f] shadow-md">
+        <div className="sticky top-0 z-50 bg-[#0a192f] shadow-md">
             <div className="px-6 py-4 max-w-6xl mx-auto flex justify-between items-center">
                 {/* Logo / Initial */}
                 <img src={logo} alt="" />
@@ -12,9 +13,9 @@ const Header = () => {
                 <nav>
                     <ul className="hidden md:flex space-x-8 font-mono text-sm text-[#64ffda]">
                         <li className="hover:text-[#64ffda] transition">
-                            <a href="#home">
+                            <NavLink to={'/'}>
                                 Home
-                            </a>
+                            </NavLink>
                         </li>
 
                         <li className="hover:text-[#64ffda] transition">
